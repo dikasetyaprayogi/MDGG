@@ -1,0 +1,41 @@
+PROBLEMS
+1.in search entry nonprivacy search engine suggesttion (triggered when search doesnt match anything)
+2.nonprivacy search engine suggesttion (clickable search button)
+
+CHANGELOG
+1.removed ./usr/share/mate-menu/icons/search_engines/google.ico
+2.add ./usr/share/mate-menu/icons/search_engines/duckduckgo.ico
+3.find and replaced some text in ./usr/lib/python2.7/site-packages/mate_menu/plugins/applications.py as follow:
+Google -> DuckDuckGo
+google -> duckduckgo
+google.ico -> duckduckgo.ico
+http://www.google.com -> http://www.duckduckgo.com
+4.find and replaced some text in ./usr/share/mate-menu/plugins/applications.py
+Google -> DuckDuckGo
+google -> duckduckgo
+google.ico -> duckduckgo.ico
+http://www.google.com -> http://www.duckduckgo.com
+5.find and replaced some text in ./usr/share/mate-menu/applications.list
+firefox.desktop -> iceweasel-uxp.desktop
+thunderbird.desktop -> icedove-uxp.desktop
+
+REBUILD
+1.
+rm ./usr/share/mate-menu/icons/search_engines/google.ico
+2.
+curl  https://github.com/dikasetyaprayogi/MDGG/raw/master/web-browser.ico > ./usr/share/mate-menu/icons/search_engines/duckduckgo.ico
+3.
+sed -i 's/Google/DuckDuckGo/g' ./usr/lib/python2.7/site-packages/mate_menu/plugins/applications.py
+sed -i 's/google/duckduckgo/g' ./usr/lib/python2.7/site-packages/mate_menu/plugins/applications.py
+sed -i 's/google.ico/duckduckgo.ico/g' ./usr/lib/python2.7/site-packages/mate_menu/plugins/applications.py
+sed -i 's/http://www.google.com/http://www.duckduckgo.com/g' ./usr/lib/python2.7/site-packages/mate_menu/plugins/applications.py
+4.
+sed -i 's/Google/DuckDuckGo/g' ./usr/share/mate-menu/plugins/applications.py
+sed -i 's/google/duckduckgo/g' ./usr/share/mate-menu/plugins/applications.py
+sed -i 's/google.ico/duckduckgo.ico/g' ./usr/share/mate-menu/plugins/applications.py
+sed -i 's/http://www.google.com/http://www.duckduckgo.com/g' ./usr/share/mate-menu/plugins/applications.py
+5.
+sed -i 's/firefox.desktop/iceweasel-uxp.desktop/g' ./usr/share/mate-menu/applications.list
+sed -i 's/thunderbird.desktop/icedove-uxp.desktop/g' ./usr/share/mate-menu/applications.list
+
+
