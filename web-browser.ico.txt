@@ -1,0 +1,5 @@
+web-browser.ico
+
+general web icon used to symbolize web service
+modified from web-browser.png part of adwaita icon theme using png2ico
+license: gpl
